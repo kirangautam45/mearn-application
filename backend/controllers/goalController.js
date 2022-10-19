@@ -7,9 +7,18 @@ const User = require("../models/userModel");
 // @route Get/api/goals
 //@access private
 const getGoals = asyncHandler(async (req, res) => {
-  const goals = await Goal.find({ user: "634e8da6aeeec6d8ce18f7f1" });
-  const filter =  goals.filter((value) => { value.user, value.text })
-  res.json(filter)
+  const goals = await Goal.find({ user: req.user.id });
+  res.status(200).json(goals)
+
+  // const modifiedGoals = goals.map((goal) => {
+  //   const { _id, __v, text, ...rest } = goal.toObject();
+
+  //   return {
+  //     Description: text,
+  //     ...rest,
+  //   };
+  // });
+  // res.json(modifiedGoals);
 });
 //@desc Set goal
 // @route POST/api/goals
