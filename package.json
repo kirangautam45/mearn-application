@@ -1,5 +1,5 @@
 {
-  "name": "mern-app",
+  "name": "todo-app",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,7 +12,9 @@
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
+    "predeploy": "npm run build",
+"deploy": "gh-pages -d build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
