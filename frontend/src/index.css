@@ -93,16 +93,16 @@ h3 {
 }
 
 .goal {
-  background-color: #f4f4f4;
+  background-color: #a0a0a0;
   margin: 10px 0;
-  padding: 20px 0 10px;
+  padding: 30px 0 10px;
   position: relative;
 }
 
 .goal .close {
   position: absolute;
   top: 10px;
-  right: 15px;
+  right: 20px;
   cursor: pointer;
   border: none;
   background: none;
@@ -145,7 +145,6 @@ h3 {
   font-weight: 700;
   cursor: pointer;
   text-align: center;
-  appearance: button;
   display: flex;
   align-items: center;
   justify-content: center;
