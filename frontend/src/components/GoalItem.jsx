@@ -16,8 +16,9 @@ const GoalItem=({ goal }) =>{
           color="white"
         />
         <AiOutlineEdit onClick={() => dispatch(updateGoal(goal._id))}
+        
         color='white'
-        />
+        /> 
       </button>
     </div>
   );

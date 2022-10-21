@@ -1,8 +1,9 @@
+import e from 'cors'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { createGoal } from '../features/goals/goalSlice'
 
-function GoalForm() {
+const GoalForm=()=> {
   const [text, setText] = useState('')
 
   const dispatch = useDispatch()
@@ -14,9 +15,10 @@ function GoalForm() {
     setText('')
   }
 
+
   return (
     <section className='form'>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={ onSubmit}>
         <div className='form-group'>
           <label htmlFor='text'>Set Your Task</label>
           <input
